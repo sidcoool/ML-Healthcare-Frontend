@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+</head>
+<body background="../../assets/loginBackground.jpg">
+        <!-- <h1 class="text-center mt-4 p-2 alert-info rounded-pill ml-5 mr-5">ADD AND SHARE YOUR SPECIAL MOMENTS</h1> -->
+    <div class="container bg-light p-2 mt-3 col-10 col-lg-8">
+            <h2 class="font-weight-bold p-2 m-4">Sign Up</h2>
+
+    <form class="form-group m-4 p-2 col-sm-10">
+        <label for="FirstName" class="mt-2">First Name</label>
+        <input type="text" name="FirstName" [(ngModel)]="FirstName" placeholder="Enter Firstname" class="form-control col-8 col-lg-4">
+
+        <label for="Email" class="mt-4">Email</label>
+        <input type="email" name="Email" [(ngModel)]="Email" placeholder="Enter Email" class="form-control col-8 col-lg-4">
+
+        <label for="Age" class="mt-4">Age</label>
+    <input type="text" name="Age" [(ngModel)]="Age" placeholder="Enter Age" class="form-control col-8 col-lg-4">
+
+    <label for ="Password" class="mt-4">Password</label>
+    <input type="Password" name="Password" [(ngModel)]="Password" placeholder="Enter Password" class="form-control col-8 col-lg-4">
+    
+    <input type="submit" value="SIGN UP" class="btn btn-dark p-2 mt-4 col-4 col-lg-2 d-block" (click)="signup()">
+    <h5 class="mt-4 d-inline-block">Already a User ? </h5>
+    <a href="/" class="d-inline-flex"><h5>Login</h5></a>
+    </form>
+
+</div>
+</body>
+</html>

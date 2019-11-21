@@ -1,0 +1,108 @@
+<head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      </head>
+      
+      <div class="d-flex justify-content-around" style="background-color:aliceblue;">
+          
+          <span class="nav-item bd-highlight alert-info">
+            <a class="nav-link" routerLink="../track">Add Records</a>
+          </span>
+      
+          <span class="nav-item bd-highlight alert-info">
+            <a class="nav-link" routerLink="../viewtrack">View Records</a>
+          </span>
+          
+
+      </div>
+      
+      <div class="container-fluid text-center p-2" *ngFor="let unit of tracks" style="background-color:aliceblue;">
+        <div class="container p-2">
+          <div class="card" style="width:400px">
+            <img class="card-img-top" [src]="unit.img" alt="Card image" style="width:100%">
+            <div class="card-body">
+              <h4 class="card-title">{{unit.type}}</h4>
+              <p class="card-text">{{unit.msg}}</p>
+              <a class="btn btn-info stretched-link" (click)="open(content1, content2, content3, unit.id)">Add Data</a>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      
+      
+      <ng-template #content1 let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Blood Glucose</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+            <div>
+                <canvas #lineChart>{{ chart }}</canvas>
+              </div>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+        </div>
+      </ng-template>
+      
+      
+      
+      <ng-template #content2 let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Blood Pressure</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="dateOfBirth">Date of birth</label>
+              <div class="input-group">
+                <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker
+                  #dp="ngbDatepicker">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button">
+                    <i class="fa fa-calendar"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+        </div>
+      </ng-template>
+      
+      
+      
+      <ng-template #content3 let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Headache</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="dateOfBirth">Date of birth</label>
+              <div class="input-group">
+                <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker
+                  #dp="ngbDatepicker">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+        </div>
+      </ng-template>

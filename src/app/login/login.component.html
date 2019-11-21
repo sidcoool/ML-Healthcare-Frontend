@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+</head>
+<body background="../../assets/loginBackground.jpg">
+        <!-- <h1 class="text-center mt-4 p-2 alert-info rounded-pill ml-5 mr-5">ADD AND SHARE YOUR SPECIAL MOMENTS</h1> -->
+    <div class="container bg-light p-2 mt-3 col-10 col-lg-8">
+            <h2 class="font-weight-bold p-2 m-4">Login</h2>
+
+    <form class="form-group m-4 p-2">
+        <label for="Email" class="mt-2">First Name</label>
+    <input type="text" name="Email" [(ngModel)]="email" placeholder="Enter Email" class="form-control col-8 col-lg-4">
+
+    <label for="Password" class="mt-4">Password</label>
+    <input type="password" name="Password" [(ngModel)]="password" placeholder="Enter Password" class="form-control col-8 col-lg-4">
+
+    <input type="submit" value="LOGIN" (click)="login()" class="btn btn-dark p-2 mt-4 col-4 col-lg-2 d-block">
+    <h5 class="mt-4 d-inline-block">New User ?</h5>
+    <a href="/signup" class="d-inline-flex"><h5>Sign Up</h5></a>
+    </form>
+</div>
+</body>
+</html> 

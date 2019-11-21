@@ -1,0 +1,12 @@
+#landing1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('../../assets/hc1.jpg');
+    height: 350px;
+    color: white;
+    
+  }
+
+  #landing2 {
+      background-color: #1CB5C7;
+      color: white;
+      height: 400px;
+  }

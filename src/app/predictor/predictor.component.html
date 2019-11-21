@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+</head>
+
+<body class="row" background="../../assets/hc1.jpg">
+        <div class="col-lg-2 col-sm-4">
+            <div class="alert alert-info text-center p-2" routerLink="./diabetes" style="height: 150px;">
+                <h4 class="mt-4">
+                    <b>Diabetes</b>
+                </h4>
+            </div>
+
+            <div class="alert alert-danger text-center p-2" routerLink="./sc" style="height: 150px;">
+                <h4 class="mt-4">
+                    <b>Skin Cancer</b>
+                </h4>
+            </div>
+
+            <div class="alert alert-warning text-center p-2" routerLink="./diabetes" style="height: 150px;">
+                <h4 class="mt-4">
+                    <b>Liver Disease</b>
+                </h4>
+            </div>
+
+            <div class="alert alert-success text-center p-2" routerLink="./diabetes" style="height: 150px;">
+                <h4 class="mt-4">
+                    <b>Falana Dhimkana</b>
+                </h4>
+            </div>
+        </div>
+
+        <div class="col-lg-10 col-sm-8">
+            <router-outlet></router-outlet>
+        </div>
+
+</body>
+
+</html>

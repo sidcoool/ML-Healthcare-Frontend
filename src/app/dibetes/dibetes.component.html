@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+<div class="jumbotron">
+    <h3> Diabetes Prediction</h3><br>
+    <form class="form p-2">
+        <input class="form-control p-1" type="text" [(ngModel)]="pregnancies" name="pregnancies"
+            placeholder="Pregnancies"><br>
+        <input class="form-control p-1" type="text" [(ngModel)]="glucose" name="glucose" placeholder="Glucose"><br>
+        <input class="form-control p-1" type="text" [(ngModel)]="bp" name="bp" placeholder="Blood Pressure"><br>
+        <input class="form-control p-1" type="text" [(ngModel)]="skinThickness" name="skinThickness"
+            placeholder="Skin Thickness"><br>
+        <input class="form-control p-1" type="text" [(ngModel)]="Insulin" name="Insulin" placeholder="Insulin"><br>
+        <input class="form-control p-1" type="text" [(ngModel)]="BMI" name="BMI" placeholder="BMI"><br>
+        <input class="form-control p-1" type="text" [(ngModel)]="DPF" name="DPF"
+            placeholder="DiabetesPedigreeFunction"><br>
+        <input class="form-control p-1" type="text" [(ngModel)]="age" name="age" placeholder="Age"><br>
+
+        <input class="form-control" type="submit" value="Submit" (click)="predict()">
+    </form>
+    <br>
+    <h3>Predicted Result is: {{ dibetes }}</h3>
+</div>

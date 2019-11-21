@@ -1,0 +1,19 @@
+<div class="text-center m-2">
+    <h2><b> Skin Cancer Prediction </b></h2><br>
+
+    <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+    <h4 class="p-2">{{ fileName }}</h4>
+    <button class="btn btn-lg btn-danger p-2" (click)="fileInput.click()">Select File</button><br>
+    <div>
+    <button (click)="onUpload()" class="btn btn-dark p-2 mt-2">Upload!</button>
+    <h3>{{ progress }}</h3>
+    </div>
+    <br>
+    <span class="p-4">
+        <h3 class="alert alert-primary">
+            <b>Result: {{ scResult }}</b>
+        </h3>
+    </span>
+
+
+</div>
